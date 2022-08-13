@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/geral.css" />
+    <link rel="icon" href="../imagens/favicon.ico" />
+
+    <title>Pedir</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg navbar-light bg-header">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../imagens/Chipotle-Logo.png" height="80" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler bg-butao"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="order.html">Pedir</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="pedido">
+          <h1>FAÇA AQUI SEU PEDIDO</h1>
+          <h3>Escolha seu lanche</h3>
+          <form id="tudo">
+            <div id="bacia">
+              <div class="row m-auto">
+                <div class="col" id="ingrediente1">
+                  <img src="../imagens/bigmac.png" alt="bigmac" />
+                  <p>Big Mac</p>
+                </div>
+                <div class="col" id="ingrediente2">
+                  <img src="../imagens/mcclub.png" alt="mcclub" />
+                  <p>McClub</p>
+                </div>
+                <div class="col" id="ingrediente3">
+                  <img src="../imagens/quarteirao.png" alt="Quarteirão" />
+                  <p>Quarteirão</p>
+                </div>
+                <div class="col" id="ingrediente4">
+                  <img src="../imagens/bigtasty.png" alt="Big Tasty" />
+                  <p>Big Tasty</p>
+                </div>
+                <div class="col" id="ingrediente5">
+                  <img
+                    src="../imagens/mcchickenbacon.png"
+                    alt="McChicken Bacon"
+                  />
+                  <p>McChicken Bacon</p>
+                </div>
+                <div class="col" id="ingrediente6">
+                  <img
+                    src="../imagens/mcnificobacon.png"
+                    alt="McNífico Bacon"
+                  />
+                  <p>McNífico Bacon</p>
+                </div>
+              </div>
+            </div>
+            <div class="selecionar">
+              <h2>Selecione o lanche</h2>
+              <select id="selectlanche">
+                <option value="10.00">Big Mac R$10,00</option>
+                <option value="15.00">McClub R$15,00</option>
+                <option value="20.00">Quarteirão R$20,00</option>
+                <option value="25.00">Big Tasty R$25,00</option>
+                <option value="30.00">McChicken Bacon R$30,00</option>
+                <option value="17.00">McNífico Bacon R$17,00</option>
+              </select>
+            </div>
+
+            <div class="numeroPedidos">
+              <label>Digite a quantidade de lanches que deseja pedir </label>
+              <input id="quantidade" type="number" />
+              <input id="botao" type="submit" value="Confirmar" />
+              <h3 id="total">...</h3>
+              <label for="total" class="total2">Total</label>
+            </div>
+          </form>
+
+          <form>
+            <div class="preencher">
+              <h1>PREENCHA SEUS DADOS</h1>
+              <div class="form-group">
+                <label for="nome">Nome completo: </label>
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Insira seu nome completo"
+                />
+              </div>
+              <div class="form-group">
+                <label for="endereço">Endereço: </label>
+                <input
+                  type="text"
+                  id="endereço"
+                  placeholder="Insira seu endereço completo"
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone: </label>
+                <input
+                  type="number"
+                  id="telefone"
+                  placeholder="Insira seu telefone completo"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email: </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Insira seu email completo"
+                />
+              </div>
+              <div class="pagamento">
+                <h1>FORMA DE PAGAMENTO</h1>
+                <select id="pagamento1">
+                  <option>Dinheiro</option>
+                  <option>Pix</option>
+                  <option>Cartão de Crédito</option>
+                </select>
+              </div>
+              <button type="submit" class="btn bg-butao" onclick="alerta()">
+                Confirmar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="rodape">
+          <h2>CONTATO</h2>
+          <p>Chipotle</p>
+          <p>Telefone: (51) 3261-5487</p>
+          <p>
+            Endereço: Av. Dep, Av. Fernando Ferrari, 1443 - Nossa Sra. de
+            Lourdes, Santa Maria - RS, 97050-801
+          </p>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/valor.js"></script>
+  </body>
+</html>
